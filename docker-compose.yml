@@ -1,9 +1,18 @@
 version: '3.1'
 
 services:
-  website:
+  watershedglobal:
+    container_name: watershedglobal
+    image: watershed.global:site
     build:
       context: .
       dockerfile: Dockerfile
+        #image: hub.home/watershed.global:site
     ports:
-        - "3000:3000"
+      - "3100:3000"
+    networks:
+      - homedock
+
+networks:
+  homedock:
+    external: true
