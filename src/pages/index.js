@@ -9,9 +9,6 @@ import Card from '../components/Card';
 
 import styles from '../styles/Home.module.scss'
 
-const BRAND_LEFT = 'b-street';
-const BRAND_RIGHT = '.build';
-
 import SITE from '../sitemap'
 
 export default function Home() {
@@ -28,7 +25,7 @@ export default function Home() {
 
             <Main>
                 <h1 className={styles.title}>
-                    <a className="gradient" href={`https://www.${SITE.Company.fqdn}`}>{BRAND_LEFT}</a> {BRAND_RIGHT}
+                    <a className="gradient" href={`https://www.${SITE.Company.fqdn}`}>{SITE.Company.name}</a> {SITE.Company.tld}
                 </h1>
 
                 <p className={styles.description}>
