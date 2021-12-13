@@ -1,13 +1,10 @@
 version: '3.1'
 
 services:
-  watershedglobal:
-    container_name: watershedglobal
-    image: watershed.global:site
-    build:
-      context: .
-      dockerfile: Dockerfile
-        #image: hub.home/watershed.global:site
+  www-wglobal:
+    container_name: www-wglobal
+    image: www-wglobal
+    build: .
     ports:
       - "3100:3000"
     networks:
